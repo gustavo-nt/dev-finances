@@ -126,7 +126,7 @@ const DOM = {
     },
 
     innerHTMLTransaction(transaction, index) {
-        const cssClass = transaction.amount > 0 ? "income" : "expense";
+        const cssClass = transaction.amount > 0 ? "income-color" : "expense-color";
 
         const amount = Utils.formatCurrency(transaction.amount);
 
