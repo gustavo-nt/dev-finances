@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="https://github.com/gustavo-nt/dev-finances/blob/master/public/assets/github/logo.svg" alt="logo" height="200px"/>
+  <img src="https://github.com/gustavo-nt/dev-finances/blob/master/public/assets/github/logo.svg" alt="logo" height="100px"/>
 </h4>
 
 <h1 align="center">
