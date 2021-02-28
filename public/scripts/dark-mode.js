@@ -19,6 +19,8 @@ if(toggle) {
 
     if(container) {
         Object.assign(container.style,{
+            width: 'min(90vw, 800px)', 
+            margin: '0 auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'flex-end'
@@ -26,11 +28,7 @@ if(toggle) {
     }
 
     if(content) {
-        Object.assign(content.style,{
-            marginRight: '15px',
-            marginBottom: '10px',
-            cursor: 'pointer'
-        });
+        content.style.cursor = 'pointer'
     }
 
     if(icon) {
