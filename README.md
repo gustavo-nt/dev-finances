@@ -55,9 +55,6 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 # Clone este repositório
 $ git clone https://github.com/gustavo-nt/dev-finances
 
-# Navegue para a pasta
-$ cd dev-finances
-
 # Instale as dependências
 $ npm
 
