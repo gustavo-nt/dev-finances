@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="https://github.com/gustavo-nt/dev-finances/blob/master/public/assets/github/logo.svg" alt="logo" width="400px"/>
+  <img src="https://github.com/gustavo-nt/dev-finances/blob/master/official_version/public/assets/github/logo.svg" alt="logo" width="400px"/>
 </h4>
 
 <h1 align="center">
@@ -42,7 +42,7 @@
 A aplicação é um sietam de custos ou investimentos de um developer, no mesmo, possuem as entradas e saídas do capital do desenvolvedor. Projeto realizado durante a Maratona Discover da Rocketseat.
 
 ### ✅ Demonstração
-<img src="https://github.com/gustavo-nt/dev-finances/blob/master/public/assets/github/dev.finances-light-dark.png" />
+<img src="https://github.com/gustavo-nt/dev-finances/blob/master/official_version/public/assets/github/dev.finances-light-dark.png" />
 
 ### ⚙ Pré-requisitos
 
