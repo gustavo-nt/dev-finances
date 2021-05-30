@@ -35,6 +35,7 @@
 - [x] Possibilidade de editar da finança desejada
 - [x] Possibilidade de deletar da finança desejada
 - [x] Funcionalidade de Imprimir o extrato
+- [x] Ofuscar valores
 
 ### 💻 Projeto
 
