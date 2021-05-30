@@ -1,0 +1,394 @@
+/* Style CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --font-color: #363f5f;
+    --light-green: #3dd705;
+    --green: #49aa26;
+    --red: #e92929;
+    --bg-color: #f0f2f5;
+    --bg-header: #2d4a22;
+    --bg-card: #fff;
+    --card-color: white;
+    --data-table: #969cb3;
+    --table-th: #fff;
+    --table-td: #fff;
+    --expense-color: #e92929;
+    --income-color: #12a454;
+    --modal-color: #f0f2f5;
+    --input-color: #fff;
+    --font-tooltip: #fff;
+    --bg-tooltip: #000;
+}
+
+html {
+    font-size: 93.75%
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--font-color);
+    font-weight: normal;
+}
+
+a {
+    color: var(--green);
+    transition: color .2s;
+}
+
+a:hover {
+    color: var(--light-green);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    color: white;
+    background: var(--green);
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+button:hover {
+    background: var(--light-green);
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+header {
+    background: var(--bg-header);
+    padding: 1.2rem 0 10rem;
+    text-align: center;
+}
+
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card h3 .visible {
+    cursor: pointer;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card.total {
+    background: var(--green);
+    color: var(--card-color);
+}
+
+.card.total svg path{
+    stroke: var(--card-color);
+}
+
+#transaction {
+    display: block;
+    width: 100%;
+    overflow: hidden auto;
+}
+
+#transaction div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#transaction div .printer {
+    position: relative;
+}
+
+#transaction div .printer svg {
+    margin-bottom: .8rem;
+    cursor: pointer;
+}
+
+#transaction div .printer svg g path{
+    fill: var(--font-color);
+}
+
+#transaction div .printer span {
+    position: absolute;
+    z-index: 10;
+    top: 60%;
+    right: 0%;
+    padding: .45rem .8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: var(--font-tooltip);
+    border-radius: 50px;
+    background-color: var(--bg-tooltip);
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#transaction div .printer svg:hover ~ span {
+    top: 100%;
+    opacity: 0.9;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: var(--data-table);
+}
+
+table thead tr td:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr td:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table th {
+    background: var(--table-th);
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table tbody td:nth-child(4), table tbody td:nth-child(5) {
+    width: 56px;
+    margin: 0;
+    padding: 0;
+}
+
+table td {
+    background: var(--table-td);
+    padding: 1rem 2rem;
+    font-weight: normal;
+}
+
+td.description {
+    color: var(--font-color);
+}
+
+td.income-color {
+    color: var(--income-color);
+}
+
+td.expense-color {
+    color: var(--expense-color);
+}
+
+td.edit {
+    text-align: right;
+}
+
+td.edit svg{
+    cursor: pointer;
+    max-width: 20px;
+    margin-right: 5px;
+}
+
+td.edit svg g {
+    fill: var(--font-color);
+}
+
+td.edit svg:hover g{
+    fill: #354682;
+}
+
+td.delete {
+    text-align: center;
+}
+
+td.delete svg {
+    cursor: pointer;
+}
+
+td.delete svg path {
+    fill: var(--expense-color);
+}
+
+td.delete svg:hover path {
+    fill: rgba(255, 0, 0, 1);
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: var(--modal-color);
+    padding: 2.4rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--font-color);
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.4;
+    color: var(--font-color);
+}
+
+.input-group.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--font-color);
+    opacity: 0.6;
+}
+
+footer div {
+    font-size: 13px;
+}
+
+footer div a {
+    color: var(--font-color) !important;
+}
+
+footer div span {
+    font-weight: bold;
+    color: var(--green);
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
