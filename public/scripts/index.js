@@ -88,7 +88,7 @@ const Transaction = {
         const now = new Date();
 
         const date = {
-            day: now.getDay(),
+            day: now.getDate(),
             month: now.getMonth() + 1,
             year: now.getFullYear(),
             hours: now.getHours(),
