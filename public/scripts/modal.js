@@ -8,7 +8,7 @@ Modal = {
     close() {
         document.querySelector('.modal-overlay').classList.remove('active');
 
-        if(document.querySelector('.modal #form').dataset.editable == 'true') {
+        if (document.querySelector('.modal #form').dataset.editable == 'true') {
             document.querySelector('input[name="description"]').value = "";
             document.querySelector('input[name="amount"]').value = "";
             document.querySelector('input[name="date"]').value = "";

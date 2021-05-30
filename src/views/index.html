@@ -42,7 +42,10 @@
             <div class="card total">
                 <h3>
                     <span>Total</span>
-                    <img src="./assets/total.svg" alt="Imagem de Total" onload="SVGInject(this)">
+                    <div>
+                        <img src="./assets/eye-visible.png" class="visible" id="visible" alt="Visivel/Invisivel">
+                        <img src="./assets/total.svg" alt="Imagem de Total" onload="SVGInject(this)">
+                    </div>
                 </h3>
                 <p id="totalDisplay">R$ 0,00</p>
             </div>
@@ -107,12 +110,16 @@
     </div> 
 
     <footer>
-        <p>dev.finance$</p>
+        <p>dev.finance$ - 2021</p>
+        <div>
+            <a href="https://github.com/gustavo-nt/dev-finances" target="_blank">Repositório: <span>gustavo-nt/dev-finances</span></a>
+        </div>
     </footer>
 
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/dark-mode.js"></script>
+    <script src="./scripts/visible.js"></script>
 </body>
 
 </html>

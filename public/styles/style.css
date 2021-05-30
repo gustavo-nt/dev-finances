@@ -139,6 +139,10 @@ header {
     justify-content: space-between;
 }
 
+.card h3 .visible {
+    cursor: pointer;
+}
+
 .card p {
     font-size: 2rem;
     line-height: 3rem;
@@ -362,6 +366,19 @@ footer {
     padding: 4rem 0 2rem;
     color: var(--font-color);
     opacity: 0.6;
+}
+
+footer div {
+    font-size: 13px;
+}
+
+footer div a {
+    color: var(--font-color) !important;
+}
+
+footer div span {
+    font-weight: bold;
+    color: var(--green);
 }
 
 @media (min-width: 800px) {

@@ -3,8 +3,9 @@ const html = document.querySelector('html');
 let check = JSON.parse(localStorage.getItem('darkMode'));
 const toggle = document.querySelector('#dark-mode');
 const borderMap = document.querySelector('.map-container');
+const visible = document.querySelector('.visible');
 
-if(!check) {
+if (!check) {
     localStorage.setItem('darkMode', JSON.stringify({
         value: false
     }));
@@ -12,30 +13,28 @@ if(!check) {
     check = JSON.parse(localStorage.getItem('darkMode'));
 }
 
-if(toggle) {
+if (toggle) {
     const container = document.createElement('div');
     const content = document.createElement('div');
     const icon = document.createElement('img');
 
-    if(container) {
+    if (container) {
         Object.assign(container.style,{
+            width: 'min(90vw, 800px)', 
+            margin: '0 auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'flex-end'
         });
     }
 
-    if(content) {
-        Object.assign(content.style,{
-            marginRight: '15px',
-            marginBottom: '10px',
-            cursor: 'pointer'
-        });
+    if (content) {
+        content.style.cursor = 'pointer'
     }
 
-    if(icon) {
+    if (icon) {
         icon.style.maxWidth = '36px';
-        if(check.value) {
+        if (check.value) {
             icon.setAttribute('src', './assets/moon.svg');
         } else {
             icon.setAttribute('src', './assets/sun.svg');
@@ -47,17 +46,19 @@ if(toggle) {
     toggle.appendChild(container);
 
     icon.addEventListener('click', function(event){
-        if(!check.value) {
+        if (!check.value) {
             localStorage.setItem('darkMode', JSON.stringify({
                 value: true
             }));
             check.value = true;
+            visible.style.filter = 'invert(1)';
             icon.setAttribute('src', './assets/moon.svg');
         } else {
             localStorage.setItem('darkMode', JSON.stringify({
                 value: false
             }));
             check.value = false;
+            visible.style.filter = 'invert(0)';
             icon.setAttribute('src', './assets/sun.svg');
         }
     
@@ -106,7 +107,7 @@ dark(check.value);
 
 // Setting the chosen theme and changing the images
 function dark(value) {
-    if(value) {
+    if (value) {
         changeColors(darkMode); 
     } else {
         changeColors(initialColors);
